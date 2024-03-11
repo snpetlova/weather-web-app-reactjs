@@ -44,6 +44,10 @@ function App() {
       });
   };
 
+  const formatTime = (timestamp) => {
+    return new Date(timestamp * 1000).toLocaleTimeString("en-US");
+  };
+
   return (
     <div className="App">
       <h1>Current Weather</h1>
@@ -67,8 +71,8 @@ function App() {
             <h3>Minimum Temperature: {weatherData.temp_min} °C</h3>
             <h3>Maximum Temperature: {weatherData.temp_max} °C</h3>
             <h3>Humidity: {weatherData.humidity}</h3>
-            <h3>Sunrise: {weatherData.sunrise}</h3>
-            <h3>Sunset: {weatherData.sunset}</h3>
+            <h3>Sunrise: {formatTime(weatherData.sunrise)}</h3>
+            <h3>Sunset: {formatTime(weatherData.sunset)}</h3>
             <h3>Country: {weatherData.country}</h3>
           </div>
         )}
