@@ -1,15 +1,37 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
-  background-image: url('/public/background.jpg');
+  background-image: url("/public/background.jpg");
   background-size: cover;
   background-position: center;
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+.container {
+  position: fixed;
+  top: 110px; 
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+h1 {
+  margin-right: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(224, 224, 224, 0.5);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  z-index: 1000;
 }
 
 .displayDataContainer {
@@ -17,10 +39,10 @@ body {
   margin: 0 auto;
   text-align: center;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.5); 
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
-  margin-top: 105px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-top: 50px;
 }
 
 input[type="text"] {
@@ -32,7 +54,7 @@ input[type="text"] {
 }
 
 button {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -41,8 +63,16 @@ button {
   margin-left: 3px;
 }
 
-.displayData{
+.displayData {
   margin-top: 20px;
 }
 
-
+.error-container {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color: #8a2323;
+  padding: 10px;
+  margin-top: 20px;
+  text-align: center;
+}

@@ -51,7 +51,7 @@ function App() {
   return (
     <div className="App">
       <h1>Current Weather</h1>
-      <div className="inputs">
+      <div className="container">
         <input
           type="text"
           onChange={(e) => {
@@ -61,9 +61,14 @@ function App() {
         <button onClick={searchWeather}>Search</button>
       </div>
 
-      <div className="displayDataContainer">
-        {error && <p>{error}</p>}
-        {dataLoaded && (
+      {error && (
+        <div className="error-container">
+          <p>{error}</p>
+        </div>
+      )}
+      
+      {dataLoaded && (
+        <div className="displayDataContainer">
           <div className="displayData">
             <h3>Description: {weatherData.description}</h3>
             <h3>Temperature: {weatherData.temp} °C</h3>
@@ -75,8 +80,8 @@ function App() {
             <h3>Sunset: {formatTime(weatherData.sunset)}</h3>
             <h3>Country: {weatherData.country}</h3>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }
