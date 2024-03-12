@@ -27,10 +27,6 @@ This is a simple weather application that fetches data from a weather API to pro
 2. Click the "Search" button.
 3. View the current weather information displayed on the screen.
 
-## Screenshots
-![Screenshot 1](https://postimg.cc/Jy7jtsCy)
-
-
 ## Credits
 - Weather data provided by [Weather API](https://openweathermap.org/)
 - Tutorial by [PedroTech](https://www.youtube.com/@PedroTechnologies)
